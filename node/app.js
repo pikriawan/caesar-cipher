@@ -33,6 +33,10 @@ app.get("/encrypt", (req, res) => {
     res.send(result);
 });
 
+app.get("/health", (req, res) => {
+    res.json({ status: "up" });
+});
+
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
 });
